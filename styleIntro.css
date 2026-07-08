@@ -1,0 +1,231 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body, html {
+	margin: 0; 
+	height: 100%; 
+	width: 100%;
+	overflow: hidden;
+	background: black;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+
+.studiocity {
+	font-family: 'Bebas Neue', cursive;
+	position: absolute;
+	top: 5%;
+	left: 8%;
+	right: 8%;
+  	width: auto;
+  	padding: 22% 30%;
+  	height: 20vh;
+  	text-align: center;
+  	display: flex;
+	justify-content: center;
+    width:20%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("./img/studio.jpg");
+    background-size: cover;
+ 	background-color: #cccccc;
+ 	animation: introAnimYM 2s;
+ 	transition: 1s;
+
+}
+.studiocity img {
+}
+
+.studiocity h1 {
+	color: white;
+}
+
+.calabasas {
+	font-family: 'Bebas Neue', cursive;
+	position: absolute;
+	top: 30%;
+	left: 8%;
+	right: 8%;
+  	width: auto;
+  	padding: 22% 30%;
+  	height: 20vh;
+  	text-align: center;
+  	display: flex;
+	justify-content: center;
+    width:20%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("./img/3.jpg");
+    background-size: cover;
+ 	background-color: #cccccc;
+ 	animation: introAnimXM 1.8s;
+}
+
+.calabasas h1 {
+	color: white;
+}
+
+.ventura {
+	font-family: 'Bebas Neue', cursive;
+	position: absolute;
+	top: 55%;
+	left: 8%;
+	right: 8%;
+  	width: auto;
+  	padding: 22% 30%;
+  	height: 20vh;
+  	text-align: center;
+  	display: flex;
+	justify-content: center;
+    width:20%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("./img/ventura.jpeg");
+    background-size: cover;
+ 	background-color: #cccccc;
+ 	animation: introAnimXP 1.6s;
+}
+
+.ventura h1 {
+	color: white;
+}
+
+@keyframes introAnimXP {
+	from {
+		transform: translateX(100%);
+		opacity: 0.8;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes introAnimYM {
+	from {
+		transform: translateY(-100%);
+		opacity: 0.8;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes introAnimXM {
+	from {
+		transform: translateX(-100%);
+		opacity: 0.8;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes introAnimLogo {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.studiocity {
+		position: absolute;
+		bottom: 0%;
+		left: 5%;
+		right: 50%;
+  		padding: 14% 14%;
+  		height: 20vh;
+    	margin: auto;
+    	margin-bottom: 20%;
+    	margin-left: 0;
+    	animation: introAnim 1.6s;
+    	transition: 1s;
+	}
+	.studiocity:hover {
+		padding: 17% 17%;
+		left: 2%;
+	}
+	.calabasas {
+		position: absolute;
+		bottom: 0;
+		left: 5%;
+		right: 50%;
+  		padding: 14% 14%;
+  		height: 20vh;
+    	margin: auto;
+    	margin-bottom: 20%;
+    	margin-left: 33%;
+    	animation: introAnim 1.8s;
+    	transition: 1s;
+	}
+	.calabasas:hover {
+		padding: 17% 17%;
+		left: 2%;
+	}
+	.ventura {
+		position: absolute;
+		bottom: 0;
+		left: 5%;
+		right: 5%;
+  		padding: 14% 14%;
+  		height: 20vh;
+    	margin: auto;
+    	margin-bottom: 20%;
+   		animation: introAnim 2s;
+    	margin-left: 66%;
+    	transition: 1s;
+	}
+	.ventura:hover {
+		padding: 17% 17%;
+		left: 2%;
+	}
+	.logo {
+		bottom: 5%;
+		left: 8%;
+		right: 8%;
+		animation: logoAnim 1.5s;
+	}
+	@keyframes logoAnim {
+	from {
+		transform: translateY(-300%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+}
+
+
+
+.logo {
+	position: absolute;
+	bottom: 6%;
+	left: 8%;
+	right: 8%;
+  	width: auto;
+  	padding: 0px 30%;
+  	text-align: center;
+  	display: flex;
+	justify-content: center;
+    width:20%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    animation: introAnimXM 2.5s;
+}
+
+

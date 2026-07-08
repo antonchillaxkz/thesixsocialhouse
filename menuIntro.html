@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>The Six Social House</title>
+		<link rel="stylesheet" href="menuStyle.css">
+		<meta name="viewport" content="with=device-width", initial-scale=1.0>
+		<title> The Six Ventura </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Koulen&family=Macondo&family=Water+Brush&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Macondo&family=Montserrat:ital,wght@1,300&family=Oleo+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,200&family=League+Spartan:wght@500&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/3823570158.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="intro">
+		<div id="vid">
+			<video id="background-video" playsinline autoplay loop muted poster="./img/3.jpg">
+				<source src="./img/calabasasvid.mp4" type="video/mp4">
+			</video>
+		</div>
+	
+		<div class="container">
+				<img src="./img/logo.png" class="logo">
+			</div>
+		</div>
+
+		<style type="text/css">
+			.button-style {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.button-style:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+} 
+		</style>
+		
+			<script>
+			const myForm = document.getElementById('xd');
+			myForm.style.display = 'none';
+			document.getElementById("xd").style.transition = '3s';
+			setTimeout(() => {
+				myForm.style.display = 'inline-block';
+				document.getElementById("xd").style.transition = '3s';
+			}, 3000);
+			</script>
+			<a href="https://www.instagram.com/thesixcalabasas/" class="fa fa-instagram"></a>
+			<div id="book-event" style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+   <a href="http://the6socialhouse.com/calabasas#container" id="bookEventButton" class="button-style">Create your unique experience with the Six</a>
+</div>
+
+			<a href="https://www.yelp.com/biz/the-six-chow-house-calabasas-calabasas" class="fa-brands fa-yelp"></a>
+			<h1 id="dinner" style="text-align: center; font-size: 70px; color: white; margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%); width: 85%; background-color: black; background-color: rgba(0, 0, 0, 0.5);"><a href="http://the6socialhouse.com/calabasasDinner" style="color: white; font-family: 'Montserrat', sans-serif; text-decoration: none;">Tap here to explore our Lunch & Dinner menu</a></h1>
+  <h1 id="brunch" style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 70px; color: white; margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%); width: 85%; background-color: black; background-color: rgba(0, 0, 0, 0.5);"><a href="https://www.canva.com/design/DAFHqzUPW-I/eiDA751s1d5mp61ZpBWVoQ/view?website#4" style="color: white; font-family: 'Montserrat', sans-serif; text-decoration: none;">Tap here to explore our Brunch menu</a></h1>
+		</div>
+
+<script type="text/javascript">
+  var objDate = new Date();
+	var hours = objDate.getHours();
+	let day = objDate.getDay();
+	var mintues = objDate.getMinutes()
+
+
+	if(hours >= 7 && hours <= 14 && (day == 6 || day == 0)){
+ 	   document.getElementById('dinner').style.display = "none";
+ 	   document.getElementById('brunch').style.display = "block";
+ 	   document.getElementById("serving").innerHTML = "We are serving Brunch with Bottomless Mimosa";
+
+
+	}
+	else{
+   	 	document.getElementById('dinner').style.display = "block";
+   	 	document.getElementById('brunch').style.display = "none";
+   	 	document.getElementById("serving").innerHTML = "We are serving Lunch & Dinner";
+	}
+	</script>
+	</body>
+</html>

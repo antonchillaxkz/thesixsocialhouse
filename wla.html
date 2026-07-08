@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>The Six Social House West Los Angeles</title>
+            <meta name="description" content="The Six is a New American GastroBistro. Not quite a gastropub, not quite a bistro. The Six is seasonal, and when we say seasonal, we mean it. We pride ourselves in making nearly everything in house. The menu changes every season with specials representing the peak of their availability are highlighted throughout the week. We have items ranging from our infamous Signature Six Burger served on a fresh baked brioche bun with blu cheese, onion rings, butter lettuce, thousand island along with hand cut fries or our Potato Crust Salmon and Jidori Chicken to staples like The Six Mac n' Cheese (six artisan cheeses) and Turkey Sloppy Joes with portobello, red bell pepper & fried house made pickle. . We have 6 hand craft brews on tap including 18 different bottle beers and 18 unique wines by the glass. Come in and Try our great Gluten Free and Vegan options!">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #book-event .container .container-fluid, .row, .col-lg-8.mx-auto {
+            padding: 0;
+            margin: 0;
+        }
+        .fixed-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #home {
+            position: relative;
+            padding: 20px;
+            overflow: hidden;
+        }
+        section {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        #home .content {
+            text-align: center;
+            color: white;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+        .content {
+            text-align: center;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        #logo {
+            width: 70%;
+            max-width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+        body.blur, html.blur {
+            filter: blur(5px);
+        }
+        h1 {
+            font-size: 3em;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+        }
+        .navbar {
+            opacity: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            transition-duration: 0.4s;
+        }
+        .navbar a:hover {
+            background-color: white;
+            color: #555555;
+        }
+        .navbar-toggle {
+            display: none;
+        }
+        @media (max-width: 780px) {
+            .navbar-toggle {
+                display: block;
+                font-size: 104px;
+                cursor: pointer;
+                color: white;
+                padding: 5px;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 99999;
+            }
+            .navbar {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(10px);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 999;
+                transition: opacity 0.3s ease;
+                opacity: 0;
+            }
+              .navbar.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for opacity and transform */
+    opacity: 0;
+    transform: translateY(-100%); /* Start the navbar offscreen */
+  }
+
+  .navbar.show.showing {
+    opacity: 1;
+    transform: translateY(0%); /* Slide the navbar in from the top */
+  }
+            .navbar a {
+                display: block;
+                text-align: center;
+                padding: 14px 20px;
+                font-size: 26px;
+                color: white;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: white;
+                color: #555555;
+            }
+        }
+        section {
+            overflow-y: hidden;
+        }
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-item {
+            margin: 0;
+            height: 100vh;
+            min-height: 300px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+        .row, .col-lg-8 {
+            position: relative;
+            z-index: 999;
+        }
+                #backgroundCarousel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-item::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            position: relative;
+            max-width: 800px;
+            height: 100vh;
+            z-index: 999;
+        }
+        #book-event {
+            padding: 0;
+            background-image: url('./img/wla/wla2.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: 999;
+        }
+        #book-event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the alpha value to change the darkness */
+}
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            border-radius: 7px;
+        }
+        .logo {
+            width: 40%;
+        }
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+        }
+        form label {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .btn-primary {
+            color: #fff;
+            margin-top: 15px;
+                border-color: #000;
+
+        }
+
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+        .fixed-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+@media (max-width: 768px) { 
+               body, html {
+                font-size: 14px; /* Set the base font size for mobile */
+            }
+
+            h1 {
+                font-size: 2em; /* Modify the h1 font size for mobile */
+            }
+    .card { 
+        background-color: rgba(255, 255, 255, 0.5); 
+    } 
+    .navbar-toggle {
+                font-size: 40px; /* Adjust the font size for the toggle button */
+                padding: 5px; /* Adjust the padding for the toggle button */
+            }
+    
+ }
+
+    #hours {
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    #status {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #status.open {
+        color: green;
+    }
+
+    #status.closed {
+        color: orange;
+    }
+ /* New CSS for buttons */
+#buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: flex-end; /* Align the buttons to the bottom of the div */
+    margin: 20px 0;
+}
+
+#buttons a {
+    display: flex;
+    height: 100px; /* Fixed height for the buttons */
+    align-items: center;
+    background: rgba(128, 0, 32, 0.7);
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft box shadow for depth */
+    border: none; /* Remove default button border */
+    position: relative; /* For adding the transparency effect */
+    height: 80px;
+    margin: 10px; /* Add some spacing between buttons */
+    white-space: nowrap;
+
+}
+
+#buttons a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent background */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease;
+}
+
+#buttons a:hover:before {
+    opacity: 1; /* Show the transparent background on hover */
+}
+
+#buttons a:hover {
+    color: #fff; /* Text color on hover */
+    transform: scale(1.05); /* Slight scale-up animation on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+#fa-icon {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #buttons {
+        flex-wrap: wrap; 
+        align-items: center; 
+    }
+    #buttons a {
+        margin: 5px;
+    }
+}
+#numPeople { 
+        -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #fff;
+  outline: none;
+  border-radius: 4px;
+
+ }
+#numPeople::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #800020; /* Change this to the desired thumb color */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#numPeople::-webkit-slider-thumb:active {
+  background: #000; /* Change this to the desired color when the thumb is active */
+}
+    </style>
+
+
+    <script>
+    $(document).ready(function() {
+        $('#logo, h1').fadeIn(1500);
+
+        // Toggle mobile menu
+    $('.navbar-toggle').click(function() {
+      $('.navbar').toggleClass('show'); // Toggle the 'show' class to display the navbar
+      $('.content-blur').toggleClass('blur'); // Toggle the 'blur' class to the body and html elements
+
+      if ($('.navbar').hasClass('show')) {
+        // If the navbar is shown, add 'showing' class with a delay to trigger the sliding animation
+        setTimeout(function() {
+          $('.navbar').addClass('showing');
+        }, 50);
+      } else {
+        // If the navbar is hidden, remove the 'showing' class immediately
+        $('.navbar').removeClass('showing');
+      }
+    });
+
+    // Close navbar on link click
+    $('.navbar a').click(function() {
+      $('.navbar').removeClass('show');
+      $('.content-blur').removeClass('blur');
+      $('.navbar').removeClass('showing'); // Also remove 'showing' class to reset animation state
+    });
+
+    // ... (Existing JS) ...
+  });
+    </script>
+
+</head>
+<body>
+
+        
+
+        <!-- Navbar toggle button for mobile -->
+        <div class="navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Mobile menu for small screens -->
+        <div class="navbar">
+            <a href="https://www.yelp.com/biz/the-six-chow-house-west-los-angeles-los-angeles?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)">Make a Reservation</a>
+            <a href="#book-event">Book an Event</a>
+            <a href="#buttonsMenu">See Our Menu</a>
+            <a href="#delivery">Delivery</a>
+            <a href="tel:+13108376662">Call Us</a>
+        </div>
+   <section id="home">
+     <div id="backgroundCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('./img/wla/wla1.jpeg');"></div>
+            <div class="carousel-item" style="background-image: url('./img/wla/wla2.jpeg');"></div>
+            <div class="carousel-item" style="background-image: url('./img/wla/wla4.jpeg');"></div>
+            <div class="carousel-item" style="background-image: url('./img/wla/wla5.jpeg');"></div>
+            <div class="carousel-item" style="background-image: url('./img/wla/wl7.jpeg');"></div>
+        </div>
+    </div>
+        <div class="content">
+            <img id="logo" src="./img/logo.png">
+                    <!-- Adding the opening hours and status here -->
+        <div id="hours">
+            <p id="status"></p>
+            <p>Opening hours:</p>
+            <p>Monday - Tuesday: 11:30am - 9:00pm</p>
+            <p>Wednesday - Thursday: 11:30am - 10:00pm</p>
+            <p>Friday: 11:30am - 11:00pm</p>
+            <p>Saturday: 10:00am - 11:00pm</p>
+            <p>Sunday: 10:00am - 10:00pm</p>
+            <p>Brunch Saturday and Sunday: 10:00am - 3:00pm</p>
+        </div>
+                <!-- Adding buttons and icon here -->
+        <div id="buttons">
+            <a href="https://www.yelp.com/biz/the-six-chow-house-west-los-angeles-los-angeles?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)">Make a Reservation</a>
+            <a href="#book-event" class="book-event-button">Book an Event</a>
+            <a href="#buttonsMenu">Menu</a>
+        </div>
+        <i id="fa-icon" class="fas fa-angle-down"></i>
+    </div>
+    </section>
+
+    <script>
+    function checkOpenHours() {
+        let now = new Date();
+        let day = now.getDay();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+
+        let weekdaysOpen = 11.5;  // open at 11:30
+        let weekdaysClose = 21;   // close at 21:00
+        let wedThuClose = 22;     // close at 22:00
+        let friOpen = 11.5;       // open at 11:30
+        let friClose = 23;        // close at 23:00
+        let satOpen = 10;         // open at 10:00
+        let satClose = 23;        // close at 23:00
+        let sunOpen = 10;         // open at 10:00
+        let sunClose = 22;        // close at 22:00
+
+        let currentTime = hour + minute/60;
+
+        let isOpen = (day >= 1 && day <= 2 && currentTime >= weekdaysOpen && currentTime < weekdaysClose) ||
+            (day >= 3 && day <= 4 && currentTime >= weekdaysOpen && currentTime < wedThuClose) ||
+            (day === 5 && currentTime >= friOpen && currentTime < friClose) ||
+            (day === 6 && currentTime >= satOpen && currentTime < satClose) ||
+            (day === 0 && currentTime >= sunOpen && currentTime < sunClose);
+
+        document.getElementById("status").innerText = isOpen ? "We are now open" : "We are now closed";
+    }
+    // Call the function as soon as the page loads
+    checkOpenHours();
+</script>
+
+<!-- Gallery --> 
+
+<style>
+  .our-spaces {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: all 4s ease;
+  }
+
+  .slide {
+    position: relative;
+    min-width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* You can adjust the darkness by changing the value */
+  z-index: 0;
+}
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ .slide h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  margin-bottom: 200px; /* Increase distance between h1 and description */
+font-family: 'Quicksand', sans-serif;
+}
+
+.slide p {
+  position: absolute;
+  top: 40%; /* Adjusted to increase distance from the h1 */
+  left: 50%;
+  transform: translate(-50%, 10%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 60%; /* You can adjust the width as needed */
+  z-index: 2;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="our-spaces">
+  <div class="slider-wrapper">
+    <div class="slide">
+      <img src="./img/wla/wlaFront.jpeg" alt="Interior 1">
+      <h1>Front</h1>
+      <p>Taste life from our front-row view</p>
+    </div>
+    <div class="slide">
+      <img src="./westla/wl5.jpeg" alt="Interior 2">
+      <h1>Dining Hall</h1>
+      <p>Indulge in comfort in our spacious dining hall</p>
+    </div>
+    <div class="slide">
+      <img src="./img/wla/wlaBack.jpeg" alt="Interior 3">
+      <h1>Back Patio</h1>
+      <p>Unwind outdoors with flavorsome food</p>
+    </div>
+    <div class="slide">
+      <img src="./img/wla/wlaBar.jpeg" alt="Interior 4">
+      <h1>Bar Area</h1>
+      <p>Sip, socialize, and savor in our bar</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const wrapper = document.querySelector('.slider-wrapper');
+  let slideIndex = 0;
+
+  setInterval(() => {
+    slideIndex = (slideIndex + 1) % 4; // Cycle through the 4 images
+    wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }, 5000); // Change every 4 seconds
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="eventForm.js"></script>
+
+
+        <!-- Event form section -->
+    <section id="book-event">
+    <form action="https://formsubmit.co/thesixevent@gmail.com" method="POST" id="eventForm">
+         <div class="container py-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="./img/logoBlack.png" alt="logo" class="logo">
+                        <h2 class="card-title" style="color: ">Book Your Event</h2>
+                    </div>
+                    <form id="eventForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" required>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventType">Event Type:</label>
+                            <select class="form-control" id="eventType">
+                                <option>Corporate Event</option>
+                                <option>Baby Shower</option>
+                                <option>Birthday</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+    <label for="numPeople">Number of People: <span id="numPeopleDisplay">1</span></label>
+    <input type="range" min="1" max="200" value="1" class="form-control" id="numPeople">
+</div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="background-color: #800020;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </form>
+
+    </section>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6612.143474164645!2d-118.42906352875464!3d34.04203088470602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bbbdbdfec2ef%3A0x5c38b65bb8258fb2!2sThe%20Six%20Chow%20House!5e0!3m2!1sen!2snl!4v1690550795040!5m2!1sen!2snl" width="100%" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<style type="text/css">
+    @media screen and (min-width: 900px){
+    #brunch {
+        display: none;
+    }
+} 
+
+.booking-section {
+    background-color: #000; /* Light gray background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.booking-section .content {
+    display: flex;
+    flex-direction: column;
+}
+.booking-section .content .motivational-text {
+    margin-bottom: 20px; /* Adjust the value as needed for desired spacing */
+}
+
+.motivational-text {
+
+    font-size: 13px; /* Larger font size for a more remarkable header */
+    margin-bottom: 20px;
+    color: white;
+}
+
+.reservation-button {
+    background-color: #800020; /* Red background color for the button */
+    color: white; /* Text color for the button */
+    font-size: 18px;
+    padding: 12px 30px; /* Increased padding for a more prominent button */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-button:hover {
+    background-color: #E03A3A; /* Slightly darker shade on hover */
+}
+
+</style>
+    <section class="booking-section">
+        <div class="content">
+            <h2 class="motivational-text">The Six is a New American GastroBistro. Not quite a gastropub, not quite a bistro. The Six is seasonal, and when we say seasonal, we mean it. We pride ourselves in making nearly everything in house. The menu changes every season with specials representing the peak of their availability are highlighted throughout the week. We have items ranging from our infamous Signature Six Burger served on a fresh baked brioche bun with blu cheese, onion rings, butter lettuce, thousand island along with hand cut fries or our Potato Crust Salmon and Jidori Chicken to staples like The Six Mac n' Cheese (six artisan cheeses) and Turkey Sloppy Joes with portobello, red bell pepper & fried house made pickle. . We have 6 hand craft brews on tap including 18 different bottle beers and 18 unique wines by the glass. Come in and Try our great Gluten Free and Vegan options!</h2>
+            <a href="#" class="reservation-button">Make a Reservation</a>
+        </div>
+    </section>
+
+<style type="text/css">
+    #buttonsMenu a {
+    display: flex;
+    height: 100px; /* Fixed height for the buttons */
+    align-items: center;
+    background: rgba(128, 0, 32, 0.9);
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft box shadow for depth */
+    border: none; /* Remove default button border */
+    position: relative; /* For adding the transparency effect */
+    height: 80px;
+    margin: 10px; /* Add some spacing between buttons */
+    white-space: nowrap;
+
+}
+
+#buttonsMenu a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent background */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease;
+}
+
+#buttonsMenu a:hover:before {
+    opacity: 1; /* Show the transparent background on hover */
+}
+
+#buttonsMenu a:hover {
+    color: #fff; /* Text color on hover */
+    transform: scale(1.05); /* Slight scale-up animation on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    } 
+
+
+    div.logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div.logos a {
+      margin: 10px;
+      display: inline-block;
+    }
+
+    div.logos img {
+      width: 50px; /* Adjust this value to make the logos smaller */
+      height: 50px; /* Adjust this value to make the logos smaller */
+    } 
+</style>
+
+    <div id="buttonsMenu">
+    <a href="#dinner" class="buttonsMenu" onclick="showDiv('dinner')">Dinner</button>
+    <a href="#brunch" class="id" onclick="showDiv('brunch')">Brunch</button>
+
+  </div>
+      <div id="dinner" style="position: relative; width: 100; height: 0; padding-top: 200.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFYChDIX4I&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+
+</div></div>
+    <div id="brunch" style="display: none; position: relative; width: 100%; height: 0; padding-top: 200.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style=" position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFbmXby8VY&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFbmXby8VY&#x2F;view?utm_content=DAFbmXby8VY&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a></div>
+
+
+<!-- Delivery for Grabhub, Doordash, Ubereats, Slice-->
+
+<div id="delivery" style="justify-content: center; text-align: center;">
+  <h1>We Deliver</h1>
+  <div class="logos">
+    <a href="https://www.doordash.com/store/the-six-los-angeles-5320/"><img src="./img/doordash.webp" alt="Doordash" /></a>
+    <a href="https://www.ubereats.com/store/the-six-west-la/1ofgwQj9SvO5DvOD6fnXkQ"><img src="./img/ubereats.png" alt="UberEats" /></a>
+    <a href="https://www.thesixchowhouse.com/"><img src="./img/slice.png" alt="Slice" /></a>
+    <a href="https://www.grubhub.com/restaurant/the-six-chow-house-12650-ventura-blvd-los-angeles/553345"><img src="./img/grabhub.webp" alt="Grubhub" /></a>
+  </div>
+</div>
+
+    <footer class="footer">
+        <img src="./img/logo.png" alt="Your Logo" class="footer-logo">
+        <div class="footer-links">
+            <a href="#book-event">Book your event</a>
+            <a href="https://www.yelp.com/biz/the-six-chow-house-west-los-angeles-los-angeles?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)">Make a reservation</a>
+            <a href="#delivery">Delivery</a>
+            <a href="#buttonsMenu">Menu</a>
+            <a href="tel:+13108376662">Call Us</a>
+        </div>
+        <p>&copy; 2023 The Six Social House <br> 10668 W Pico Blvd. Los Angeles, CA 90064</p>
+    </footer>
+
+   <style>
+        /* Footer styles */
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .footer-logo {
+            max-width: 60px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column; /* Arrange links in a column */
+            justify-content: flex-start; /* Align links to the top of the container */
+            gap: 10px; /* Adjust the spacing between links */
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+
+
+  <script>
+    function showDiv(divId) {
+      const dinnerDiv = document.getElementById('dinner');
+      const brunchDiv = document.getElementById('brunch');
+
+      if (divId === 'dinner') {
+        dinnerDiv.style.display = 'block';
+        brunchDiv.style.display = 'none';
+      } else if (divId === 'brunch') {
+        brunchDiv.style.display = 'block';
+        dinnerDiv.style.display = 'none';
+      }
+    }
+  </script>
+        
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFYChDIX4I&#x2F;watch?utm_content=DAFYChDIX4I&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    // ...
+    $("#numPeople").on('input', function() {
+        $("#numPeopleDisplay").text($(this).val());
+    });
+    // ...
+});
+</script>
+</body>
+</html>
+
+
+

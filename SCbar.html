@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Bar boasts a 20-foot copper bar, creating an inviting focal point for intimate gatherings. Ideal for a lively social event with a small group of 50, this venue promises an upbeat and memorable experience. Picture this: the DJ spinning tunes, fire dancers mesmerizing the crowd, and an electric atmosphere that sets the stage for an unforgettable night. 🎉🔥🍹">
+    <script src="https://kit.fontawesome.com/3823570158.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/81f1fecd06.js" crossorigin="anonymous"></script> 
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XSXGES71LD"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-XSXGES71LD");
+    </script>
+    
+    <meta charset="UTF-8">
+    <title>The Six - Photo Gallery</title>
+
+    <style>
+        body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        .navbarG {
+            width: 100%;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 10%;
+            padding-top: 10%;
+        }
+        .navbar img {
+            max-width: 100px;
+            height: auto;
+            padding-bottom: 400px;
+        }
+        .nav-link {
+            display: block;
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            gap: 20px;
+            margin: 20px auto;
+        }
+        .gallery-item {
+            flex: 1 1 calc(50% - 20px);
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 1s, transform 1s;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        button {
+            overflow: visible;
+        }
+        button, select {
+            text-transform: none;
+        }
+        button, input, select, textarea {
+            color: #5A5A5A;
+            font: inherit;
+            margin: 0;
+        }
+        input {
+            line-height: normal;
+        }
+        textarea {
+            overflow: auto;
+        }
+        #container {
+            border: solid 3px #474544;
+            max-width: 768px;
+            margin: 200px auto;
+            position: relative;
+        }
+        form {
+            padding: 37.5px;
+            margin: 50px 0;
+        }
+        h1 {
+            margin-top: 15%;
+            color: #474544;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 7px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .underline {
+            border-bottom: solid 2px #474544;
+            margin: -0.512em auto;
+            width: 80px;
+        }
+        .icon_wrapper {
+            margin: 50px auto 0;
+            width: 100%;
+        }
+        .icon {
+            display: block;
+            fill: #474544;
+            height: 50px;
+            margin: 0 auto;
+            width: 100px;
+        }
+        .email {
+            float: right;
+            width: 45%;
+        }
+        input[type='text'], [type='email'], select, textarea {
+            background: none;
+            border: none;
+            border-bottom: solid 2px #474544;
+            color: #474544;
+            font-size: 1.000em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0em 0 1.875em 0;
+            padding: 0 0 0.875em 0;
+            text-transform: uppercase;
+            width: 100%;
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+        input[type='text']:focus, [type='email']:focus, textarea:focus {
+            outline: none;
+            padding: 0 0 0.875em 0;
+        }
+        .message {
+            float: none;
+        }
+        .name {
+            float: left;
+            width: 45%;
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        .subject {
+            width: 100%;
+        }
+        .telephone {
+            width: 100%;
+        }
+        textarea {
+            line-height: 150%;
+            height: 150px;
+            resize: none;
+            width: 100%;
+        }
+        ::-webkit-input-placeholder {
+            color: #474544;
+        }
+        :-moz-placeholder { 
+            color: #474544;
+            opacity: 1;
+        }
+        ::-moz-placeholder {
+            color: #474544;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            color: #474544;
+        }
+        #form_button {
+            background: none;
+            border: solid 2px #474544;
+            color: #474544;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Helvetica', Arial, sans-serif;
+            font-size: 0.875em;
+            font-weight: bold;
+            outline: none;
+            padding: 20px 35px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        #form_button:hover {
+            background: #474544;
+            color: #F2F3EB;
+        }
+        @media screen and (max-width: 768px) {
+            #container {
+                margin: 40px auto;
+                width: 95%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 26px;
+            }
+            .underline {
+                width: 68px;
+            }
+            #form_button {
+                padding: 15px 25px;
+            }
+        }
+        @media screen and (max-width: 420px) {
+            h1 {
+                font-size: 18px;
+            }
+            .icon {
+                height: 50px;
+                width: 50px;
+            }
+            .underline {
+                width: 53px;
+            }
+            input[type='text'], [type='email'], select, textarea {
+                font-size: 0.875em;
+            }
+        }
+        .logo {
+            width: 60%;
+            transition: all 0.5s ease;
+            z-index: 1;
+            margin-top: 3%;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+/*description */ 
+
+        .description {
+    width: 80%;
+    margin: 0 auto 40px;
+    text-align: center;
+      font-family: "Montserrat", italic;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.description h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* animation for navbar */ 
+
+        .nav-link {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 0.5s forwards;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .nav-link:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .nav-link:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        .nav-link:nth-child(4) {
+            animation-delay: 0.5s;
+        }
+        .nav-link:nth-child(5) {
+            animation-delay: 0.6s;
+        }
+        .nav-link:nth-child(6) {
+            animation-delay: 0.7s;
+        }
+        .nav-link:nth-child(7) {
+            animation-delay: 0.8s;
+        }
+        .nav-link:nth-child(8) {
+            animation-delay: 0.9s;
+        }
+        .nav-link:nth-child(9) {
+            animation-delay: 1.0s;
+        } 
+
+        @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.description {
+    transform: translateY(350px);
+    animation: slideBellow 1s forwards;
+    opacity: 0;
+}
+
+@keyframes slideBellow {
+    to { 
+    opacity: 1;
+    transform: translateY(0) }
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbarG">
+        <img src="./img/logoBlack.png" class="logo fade-in">
+        <a href="http://the6socialhouse.com/studiocity" class="nav-link">Home</a>
+        <a href="http://the6socialhouse.com/calabasas#container" class="nav-link"><i class="fa-regular fa-calendar"></i>  Book an Event</a>
+        <a href="https://www.yelp.com/rez/the-six-social-house-studio-city?covers=2&date=2022-11-04&source=yelp_biz&time=1900&utm_campaign=reservations_redirect&utm_source=mobile_web" class="nav-link">Make a Reservation</a>
+        <a href="http://the6socialhouse.com/SCeventgallery" class="nav-link">Event Gallery</a>
+        <a href="http://the6socialhouse.com/SCbackgarden" class="nav-link">The Back Garden</a>
+        <a href="http://the6socialhouse.com/SCroom6" class="nav-link">ROOM 6</a>
+        <a href="#" class="nav-link" style="color: #940128;"><u>The BAR</u></a>
+        <a href="http://the6socialhouse.com/studiocity#menus" class="nav-link">Our Menu</a>
+    </div>
+
+
+
+
+<!-- 
+
+
+    <footer class="footer">
+<img src="./img/logo.png" class="logo" alt="The Six Social House Logo" style="padding-bottom: 20px;             width: 30%;">        <div class="footer-text"><a href="#">The Six Social House &copy; 2024</a></div>
+        <div class="footer-text"><i class="fa-solid fa-location-dot"></i>  <a href="https://maps.app.goo.gl/JXQgFgoHRDtDqsDa7">12650 Ventura Blvd, Studio City, CA 91604</a></div>
+        <div class="footer-text"><a href="tel:+18189190396"><i class="fa-solid fa-phone"></i> Call us (818) 919-03-96</a></div>
+        <div class="footer-text"><i class="fa-solid fa-utensils"></i>  <a href="http://the6socialhouse.com/">Our Locations</a></div>
+        <div class="footer-text"><i class="fa-regular fa-calendar"></i>  <a href="http://the6socialhouse.com/calabasas#container">Book an Event</a></div>
+        <div class="footer-text"><i class="fa-regular fa-calendar"></i>  <a href="https://www.yelp.com/rez/the-six-social-house-studio-city?covers=2&date=2022-11-04&source=yelp_biz&time=1900&utm_campaign=reservations_redirect&utm_source=mobile_web">Make a Reservation</a></div>
+        <div class="footer-text"><i class="fa-solid fa-utensils"></i>  <a href="http://the6socialhouse.com/studiocity#menus">See our Menu</a></div>
+    </footer> --> 
+
+
+    <div class="description">
+    <h2>THE BAR</h2>
+    <p>The Bar boasts a 20-foot copper bar, creating an inviting focal point for intimate gatherings. Ideal for a lively social event with a small group of 50, this venue promises an upbeat and memorable experience. Picture this: the DJ spinning tunes, fire dancers mesmerizing the crowd, and an electric atmosphere that sets the stage for an unforgettable night. 🎉🔥🍹</p>
+
+</div>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="./img/Sbar/1.jpeg" alt="Event Image 1"></div>
+        <div class="gallery-item"><img src="./img/Sbar/2.jpeg" alt="Event Image 2"></div>
+        <div class="gallery-item"><img src="./img/Sbar/3.jpeg" alt="Event Image 3"></div>
+        <div class="gallery-item"><img src="./img/Sbar/4.jpeg" alt="Event Image 4"></div>
+        <div class="gallery-item"><img src="./img/Sbar/5.jpeg" alt="Event Image 5"></div>
+        <div class="gallery-item"><img src="./img/Sbar/6.jpeg" alt="Event Image 6"></div>
+    </div>
+
+
+
+
+    <div id="container" class="gallery-item" style="height: 800px;">
+        <h1>&bull; YOUR EVENT AT THE SIX &bull;</h1>
+        <form action="https://formsubmit.co/raulsilos5@gmail.com" method="POST" id="contact_form">
+            <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="My name is" name="name" id="name_input" required>
+            </div>
+            <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+                <input type="hidden" name="_next" value="http://thesixsocialhouse.unaux.com/thankyou">
+            </div>
+            <div class="telephone">
+                <label for="name"></label>
+                <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+            </div>
+            <div class="subject">
+                <label for="subject"></label>
+                <select placeholder="TYPE OF EVENT" name="subject" id="subject_input" required>
+                    <option disabled hidden selected>TYPE OF EVENT</option>
+                    <option>Birthday</option>
+                    <option>Baby Shower</option>
+                    <option>Corporate Party</option>
+                </select>
+            </div>
+            <div class="spot">
+                <label for="spot"></label>
+                <select placeholder="LOCATION" name="subject" id="subject_input" required>
+                    <option disabled hidden selected>LOCATION</option>
+                    <option>The Six © Studio City (12650 Ventura Blvd, Studio City, CA)</option>
+                    <option>The Six © Calabasas (26500 W Agoura Rd, Calabasas, CA)</option>
+                    <option>Lost & Found (11700 National Blvd Los Angeles)</option>
+                    <option>The Six © West LA (10668 West Pico Blvd, Los Angeles)</option>
+                </select>
+            </div>
+            <div class="message">
+                <label for="message"></label>
+                <textarea name="message" placeholder="Number of Guests, Date and Time, your Preferences" id="message_input" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Send Message" id="form_button" />
+            </div>
+
+
+        </form>
+
+
+<!-- buttons --> 
+
+    <style>
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+                        text-decoration: none;
+
+        }
+        .custom-button {
+            width: 200px;
+            height: 50px;
+            background-color: #C73A52;
+            color: white;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .custom-button:hover {
+            background-color: #730020;
+        }
+        .custom-button i {
+            margin-right: 5px;
+        }
+        .custom-button a { 
+            text-decoration: none;
+    color: inherit;
+ }
+    </style>
+    </div> 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const galleryItems = document.querySelectorAll(".gallery-item");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            galleryItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+    <div class="button-container gallery-item">
+        <div class="custom-button"><a href="https://www.yelp.com/rez/the-six-social-house-studio-city?covers=2&date=2022-11-04&source=yelp_biz&time=1900&utm_campaign=reservations_redirect&utm_source=mobile_web"><i class="fa-regular fa-calendar"></i>  Make a Reservation</a></div>
+        <div class="custom-button"><a href="http://the6socialhouse.com/studiocity#menus">See our Menu</a></div>
+        <div class="custom-button">
+        <i class="fa-solid fa-phone" style="color: white;"></i><a href="tel:+18189190396"> Make a Call </a>
+        </div>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13208.340670957872!2d-118.4193193716091!3d34.14416313079736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bdf14a840001%3A0xde5827fbc2705357!2sThe%20Six%20Social%20House!5e0!3m2!1sen!2sfr!4v1717248270491!5m2!1sen!2sfr" width="100%" height="50vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gallery-item"></iframe> 
+
+
+<!-- footer --> 
+
+    <style>
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .footer .footer-text {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 9px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style> 
+
+
+    <footer class="footer">
+<img src="./img/logo.png" class="logo" alt="The Six Social House Logo" style="padding-bottom: 20px;             width: 30%;">        <div class="footer-text"><a href="#">The Six Social House &copy; 2024</a></div>
+        <div class="footer-text"><i class="fa-solid fa-location-dot"></i>  <a href="https://maps.app.goo.gl/JXQgFgoHRDtDqsDa7">12650 Ventura Blvd, Studio City, CA 91604</a></div>
+        <div class="footer-text"><a href="tel:+18189190396"><i class="fa-solid fa-phone"></i> Call us (818) 919-03-96</a></div>
+        <div class="footer-text"><i class="fa-solid fa-utensils"></i>  <a href="http://the6socialhouse.com/">Our Locations</a></div>
+        <div class="footer-text"><i class="fa-regular fa-calendar"></i>  <a href="http://the6socialhouse.com/calabasas#container">Book an Event</a></div>
+        <div class="footer-text"><i class="fa-regular fa-calendar"></i>  <a href="https://www.yelp.com/rez/the-six-social-house-studio-city?covers=2&date=2022-11-04&source=yelp_biz&time=1900&utm_campaign=reservations_redirect&utm_source=mobile_web">Make a Reservation</a></div>
+        <div class="footer-text"><i class="fa-solid fa-utensils"></i>  <a href="http://the6socialhouse.com/studiocity#menus">See our Menu</a></div>
+    </footer>
+
+
+
+</body>
+</html>
+
+
+<!-- 
+
+    Room
+Venue jpg 
+Bd
+Wedding
+Space
+
+- private events 
+- events 
+- private space 
+- event space 
+- wedding 
+- baby shower 
+- bridal shower 
+- location 
+- rehearsal 
+- reserve your private room 
+- venue 
+- wedding venue
+- event venue   --> 

@@ -1,0 +1,1765 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-XSXGES71LD"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+		dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-XSXGES71LD");
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The Society of Six was an influential community of six artists in Northern California during the 1920’s prohibition era. At their cabin, known as “The Chow House,” these six closely-knit artists enjoyed creating art with their home-made meals, brews and wines.">
+	<title>The Six Social House </title>
+	<script src="https://kit.fontawesome.com/3823570158.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,200&family=League+Spartan:wght@500&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<style type="text/css">
+		* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body, html {
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+
+.ctn {
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	margin: 0;
+  	padding:  8px 50px;
+	opacity: 0.8;
+	color: #fff;
+	transition: 0.5s;
+}
+.ctn:hover {
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.navbar {
+	z-index: 1;
+	background: rgba(0,0,0,0);
+	height: 90px;
+	background-size: auto;
+	position: fixed; 
+	top: 0;
+	right: 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 20px;
+	color: whitesmoke;
+    transition-duration: 0.5s;
+    animation: nvb 6s;
+}
+.navbar h2 {
+	font-size: 12px;
+}
+@keyframes nvb {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.nav-links a {
+	font-size:20px;
+}
+.nav-links {
+	display: flex;
+	align-items: center;
+}
+.nav-links li {
+	margin: 0 30px;
+	font-family: "Work Sans";
+	color: #ffcc00;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+
+header {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 1);
+	animation: introAnimS 7s;
+	z-index: 1;
+	overflow-x: hidden;
+}
+@media (min-height: 870px) {
+	#background-video {
+		display: none;
+	}
+	header {
+		display: none;
+	}
+ }
+.logoIntro {
+	display: block;
+  	margin: 0 auto;
+  	margin-top: 50%;
+  	z-index: 0;
+  	width: 50%;
+  	opacity: 0;
+  	transition-duration: 0.5s;
+  	animation: logoIntroAnim 4s linear;
+}
+.newLogo {
+	width: 100%;
+    height: 100%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.newLogo h1 {
+	font-family: 'League Spartan', sans-serif;
+  	color: #fff;
+  	font-size: 40px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	bottom: 20%;
+  	width: 100%;
+  	opacity: 0;
+  	text-align: center;
+  	animation: textIntroAnim 7s linear;
+}
+.newLogo h2 {
+	font-family: 'Work Sans', sans-serif;
+  	color: #fff;
+  	font-size: 40px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	bottom: 15%;
+  	width: 100%;
+  	opacity: 0;
+  	text-align: center;
+  	animation: textIntroAnim 7s linear;
+}
+@keyframes textIntroAnim {
+	0% {
+		opacity: 100%;
+		transform: translateX(0);
+	}
+	25% {
+		opacity: 100%;
+		transform: translateX(0);
+	}
+	50% {
+		opacity: 100%;
+		transform: translateX(0);
+	}
+	75% {
+		opacity: 100%;
+		transform: translateX(-100%);
+		
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+}
+@keyframes logoIntroAnim {
+	0% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+	25% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+	75% {
+		opacity: 100%;
+		transform: translateY(0);
+		
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes introAnimS {
+	0% {
+		transform: translateX(-100%);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+
+@keyframes faAnim {
+  from {margin-top: -50%;}
+  to {margin-top: 1;}
+}
+.fa {
+	font-size: 50px;
+	top:  40px;
+	right: 40px;
+	z-index: 1;
+	position: fixed;
+	transition: 0.5s;
+	animation-name: faAnim;
+  	animation-duration: 1s;
+}
+.fa-brands {
+	font-size: 50px;
+	top:  40px;
+	z-index: 1;
+	position: fixed;
+	transition: 0.5s;
+	animation-name: faAnim;
+  	animation-duration: 0.7s;
+}
+.fa-bars {
+	visibility: hidden;
+}
+.fa-instagram {
+	position: absolute;
+	cursor: pointer;
+	right: 100px;
+}
+.fa-yelp {
+	right: 160px;
+}
+.fa:hover {
+	transition-duration: 0.5s;
+	border-radius: 5px;
+	padding: 2px;
+	color: darkred;
+}
+.fa-brands:hover {
+	transition-duration: 0.5s;
+	border-radius: 5px;
+	padding: 2px;
+	color: darkred;
+	cursor: pointer;
+}
+
+
+
+.logo {
+  width: 60%;
+  transition: all 0.5s ease;
+  z-index: 1;
+  margin-top: 3%;
+}
+
+
+
+.logo-menuOpen {
+
+}
+.logo:hover{
+	cursor: pointer;
+	width: 40%;
+}
+
+.map {
+	height: 25vh; /* 39 */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #000;
+	overflow: hidden;
+	transition-duration: 1s;
+	overflow-x: hidden;
+}
+@media (max-height: 750px) {
+  	.map {
+  		height: 45vh;
+  	}
+ }
+.map .fa-location-dot{
+	font-size: 30px;
+	position: absolute;
+	color: #8d021f;
+	margin: 30px auto;
+}
+.map .fa-clock{
+	font-size: 30px;
+	position: absolute;
+	color: #8d021f;
+	margin: 145px auto;
+}
+.map h2 {
+	font-family: 'Raleway', sans-serif;
+	color: whitesmoke;
+	position: absolute;
+	margin: 100px auto;
+	font-size: 20px;
+}
+.map p {
+	font-family: 'Raleway', sans-serif;
+	color: whitesmoke;
+	position: absolute;
+	font-size: 13px;
+	margin: 160px auto;
+	text-align: center;
+}
+
+
+.reservations-container {
+	max-width: 1000px;
+  position: relative;
+  margin: auto;
+  height: 22vh;
+}
+.reservations {
+	  height: 22vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+}
+.reservations h1 {
+		font-family: "Work Sans";
+  color: #ffcc00;
+  font-size: 30px;
+  margin-top: 5%;
+	
+}
+.reservations p {
+	color: whitesmoke;
+	font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (min-height: 850px) {
+	.reservations-container {
+		height: 22vh;
+	}
+	.reservations {
+		height: 22vh;
+	}
+}
+
+@media (max-height: 750px) {
+  	.reservations {
+  		height: 27vh;
+  	}
+  	.reservations-container {
+  		height: 27vh;
+  	}
+ }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+	font-family: 'Ibarra Real Nova', serif;
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 65%;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+}
+.ctn2 {
+	margin: 0;
+  	position: absolute;
+  	top: 80%;
+  	left: 50%;
+  	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	background-color: #000;
+  border: solid 2px #000;
+  color: whitesmoke;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0.8;
+}
+.ctn3 {
+  position: absolute;
+	background-color: whitesmoke;
+  border: solid 2px #000;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+	transition: all 0.3s;
+	opacity: 0.8;
+	/* margin-top: 20%;
+	margin-left: 33%; */
+}
+.ctn2:hover {
+	background-color: black;
+	color: whitesmoke;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.aboutContainer {
+	background-color: black;
+	margin-top: 5%;
+	height: 14vh;
+	transition-duration: 1s;
+}
+@media screen and (min-width: 768px) {
+		.aboutContainer {
+			display: none;
+		}
+	}
+.about {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about h1 {
+	font-family: 'Work Sans', sans-serif;
+	color: #ffcc00;
+}
+.about p {
+	font-family: 'Work Sans', sans-serif;
+	margin: 20px 20px 20px 20px;
+	text-align: center;
+	color: whitesmoke;
+	visibility: hidden;
+	transition-duration: 1s;
+
+}
+
+
+.food {
+	margin-top: 30px;
+	height: 40vh;
+}
+
+
+.foodpic {
+   width: 45%; 
+	max-height: auto;
+   position: absolute;
+   left: 10px;
+   height: 40vh;
+   object-fit: cover;
+}
+@media (max-height: 700px) {
+  	.food {
+  		height: 50vh;
+  	}
+  	.foodpic {
+  		height: 50vh;
+  	}
+ }
+.food h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	width: 50%;
+   position: absolute;
+   right: 0%;
+   text-align: center;
+}
+.foodp {
+	font-family: 'Work Sans', cursive;
+	font-size: 12px;
+	width: 30%;
+	max-width: 35%;
+   position: absolute;
+   right: 7.5%;
+   text-align: center;
+  	margin-top: 15%;
+}
+.ctnFood {
+  	position: absolute;
+   	text-align: center;
+   	width: 35%;
+   	margin-top: 60%;
+   	right: 7.5%;
+   	background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 10px 17px;
+  text-transform: uppercase;
+	transition: all 0.3s;
+}
+.ctnFood:hover {
+	background: #474544;
+  color: #F2F3EB;
+}
+
+.delivery {
+	position: relative;
+	height: 40vh;
+	background-color: black;
+	align-items: center;
+	margin-top: -10%;
+	margin-bottom: 10%;
+}
+@media screen and (min-width: 768px) {
+		.delivery {
+			display: none;
+		}
+	}
+.delivery h1 {
+	font-family: 'Work Sans', sans-serif;
+	color: #ffcc00;
+	font-size: 22px;
+	padding: 30px 0;
+  text-align: center;
+}
+.delivery p {
+	font-family: 'Work Sans', sans-serif;
+	padding: 0px 20px 20px 20px;
+	text-align: center;
+	color: whitesmoke;
+	transition-duration: 1s;
+}
+
+#grub {
+	left: 5%;
+}
+#door {
+	right: 5%;
+}
+#uber {
+	left: 5%;
+	margin-top: 20%;
+}
+#postmates {
+	right: 5%;
+	margin-top: 20%;
+}
+
+.events {
+	z-index: -1;
+	height: 40vh;
+	max-height: 70vh;
+	overflow: hidden;
+}
+.eventpic {
+	width: 45%;  
+   position: absolute;
+   right: 10px;
+   height: 40vh;
+   object-fit: cover;
+   overflow-x: hidden;
+}
+@media (max-height: 750px) {
+  	.events {
+  		height: 43vh;
+  	}
+  	.eventpic {
+  		height: 43vh;
+  	}
+ }
+.events h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	width: 50%;
+   position: absolute;
+   left: 0px;
+   text-align: center;
+   margin-top: 5%;
+}
+.eventsp {
+	font-family: 'Work Sans', cursive;
+	font-size: 15px;
+	width: 50%;
+   position: absolute;
+   left: 0px;
+   text-align: center;
+   margin-top: 25%;
+   padding: 20px auto;
+}
+.ctnEvents {
+   width: 35%;
+   margin-top: 70%;
+   left: 7.5%;
+   	 position: relative;
+   	text-align: center;
+   	width: 35%;
+   	margin-bottom: 65%;
+   	right: 7.5%;
+   	background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 10px 17px;
+  text-transform: uppercase;
+	transition: all 0.3s;
+}
+.ctnEvents:hover {
+	background-color: black;
+	color: whitesmoke;
+}
+
+@media screen and (min-width: 768px) {
+	.food {
+		display: none;
+	}
+	.events {
+		display: none;
+	}
+}
+
+.reveal{
+  transform: translateX(-900px);
+  transition: 1s all ease;
+  background-color: inherit;
+  opacity: 0.1;
+}
+.revealOpacity{
+	transform: translateX(900px);
+  transition: 3s all ease;
+  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0);
+}
+.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#container {
+  border: solid 3px #474544;
+  max-width: 768px;
+  margin: 200px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+	margin-top: 15%;
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.email {
+	float: right;
+	width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+	background: none;
+  border: none;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder { 
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #474544;
+  color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 40px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
+
+/* footer */
+
+.footer-dark {
+	margin-top: 0%;
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+  text-align: center;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+/*menus*/
+
+.menubutton {
+		position: absolute;
+   	text-align: center;
+   	width: 25%;
+   	background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 10px 17px;
+  transition: 0.5s;
+  z-index: 1;
+}
+.menubutton:hover {
+	background-color: black;
+	color: whitesmoke;
+}
+.menus {
+	height: 100vh;
+}
+@media screen and (min-width: 768px) {
+	.menus {
+		width: 50%;
+		margin-left: 25%;
+	}
+	}
+
+
+ .menus h3 {
+	font-family: "Work Sans";
+	font-size: 36px;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 30px;
+} 
+ .menuContainer h3 {
+	font-family: "Work Sans";
+	font-size: 36px;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 30px;
+} 
+.menuContainer img {
+	border: 1px solid #ddd;
+  border-radius: 4px;
+  /* padding: 70px; */
+  margin-top: 18%;
+  width: 100%;
+  z-index: -1;
+}
+
+.menus h1{
+	font-family: "Work Sans";
+	font-size: 30px;
+	text-align: center;
+}
+.menus p{
+	font-size: 10px;
+}
+
+.menuContainer {
+	text-align: center;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.menuContainer {
+		margin: 5% 45% 5% 45%;
+	}
+}
+
+/*.dinner {
+	visibility: visible;
+	position: absolute;
+	transition-duration: 0.5s;
+}*/
+
+#dinnerTxt {
+	display: block;
+	margin-top: 15%;
+}
+#brunchTxt {
+	display: none;
+	margin-top: 15%;
+}
+#drinksTxt {
+	display: none;
+	margin-top: 15%;
+}
+.emd {
+	color: darkred;
+}
+#dinnerBtn {
+	margin-left: 20%;
+}
+.brunch {
+	visibility: hidden;
+	position: absolute;
+	z-index: -1;
+	transition-duration: 0.5s;
+}
+#brunchBtn {
+	margin-left: 50%;
+}
+.drinks {
+	visibility: hidden;
+	font-size: 25px;
+	position: absolute;
+	transition-duration: 0.5s;
+}
+#drinksBtn {
+	margin-left: 70%;
+}
+
+@media screen and (max-width: 767px) {
+	.fa-bars {
+		visibility: visible;
+		position: fixed;
+		cursor: pointer;
+	}
+	.nav-links {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: black;
+		flex-direction: column;
+		width:  100%;
+		height: 100vh;
+		justify-content: center;
+		margin-top: -900px;
+		transition: all 0.5s ease;
+		justify-content: space-between;
+		padding: 200px;
+		overflow: hidden;
+		text-align: center;
+		
+	}
+	.mobile-menu {
+		margin-top: 0px;
+	}
+	.logo2 {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.logo {
+		display: none;
+	}
+	.logoIntro {
+  		margin-top: 20%;
+  		width: 30%;
+	}	
+	.nav-links {
+		justify-content: center;
+	}
+	.fa-brands {
+		visibility: hidden;
+	}
+	.ctn {
+		font-family: 'Raleway', sans-serif;
+		font-size: 20px;
+  		padding:  8px 40px;
+  		align-items: center;
+		color: #fff;
+		transition: 0.5s;
+		border: none;
+		margin: 0 auto;
+	}
+	.ctn:hover {
+		color: whitesmoke;
+		cursor: pointer;
+	}
+	.slideshow-container {
+  		width: 100%;
+  		position: relative;
+  		margin: auto;
+	}
+}
+	</style>
+
+	<nav class="navbar">
+		<div class="logo">
+			<img src="./img/logo.png" class="logo">
+		</div>
+		<a href="https://instagram.com/thesix_venturablvd?utm_medium=copy_link" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+		<a href="https://www.yelp.com/biz/the-six-chow-house-studio-city-studio-city" style="color: white;"><i class="fa-brands fa-yelp"></i></a>
+		<i class="fa fa-bars"></i>
+		
+		<img src="./img/logo.png" class="logo2">
+		<ul class="nav-links">
+			<a href="#delivery"><li class="ctn">Delivery</li></a>
+			<a href="#address"><li class="ctn">Location</li></a>
+			<a href="https://www.yelp.com/biz/the-six-chow-house-studio-city-studio-city"><li class="ctn">Reservations</li></a>
+			<a href="#menus"><li class="ctn">Menu</li></a>
+			<a href="#container"><li class="ctn">Events</li></a>
+		</ul>
+	</nav>
+
+<style type="text/css">
+	#gallery-button {
+            font-family: 'Montserrat', sans-serif;
+
+  position: absolute;
+  bottom: 20px; /* Adjust this value if needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #C73A52; /* Light burgundy color */
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* squared */
+  z-index: 1;
+  width: 400px;
+  transform: translateX(-500px);
+  opacity: 0;
+  animation: slideIn 4s forwards;
+
+}
+#gallery-button a { 
+text-decoration: none;
+    color: inherit; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(-200px);
+            }
+        }
+
+</style>
+
+	<div id="vid">
+		<video id="background-video" playsinline autoplay loop muted poster="./img/studiocity.jpg">
+			<source src="./img/Drink.mp4" type="video/mp4">
+		</video>
+		    <button id="gallery-button"><a href="http://the6socialhouse.com/SCeventgallery"> View the Gallery of THE SIX (c) Spaces</a></button>
+
+	</div>
+	<div id="forlogo"></div>
+	<header id="hdr">
+		
+	</header>
+	<div class="newLogo">
+		<img src="./img/logo.png" class="logoIntro">
+		<h1>DRINK RESPONSIBLY</h1>
+		<h2>DON'T SPILL</h2>
+	</div>
+
+	<script type="text/javascript">
+		const el = document.getElementById('background-video');
+		const el2 = document.getElementById('hdr');
+
+		setTimeout(() => {
+  			el.style.visibility = 'visible';
+  			
+
+  		// 👇️ if you used `display` to hide element
+  		// el.style.display = 'block';
+		}, 3500); // 👈️ delay in milliseconds
+		setTimeout(() => {
+  			el2.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+
+  		// 👇️ if you used `display` to hide element
+  		// el.style.display = 'block';
+		}, 7000);
+	</script>
+	
+	
+
+	<div class="map revealOpacity" id="address" style="background-color: #000">
+		<i class="fa-solid fa-location-dot"></i>
+		<h2>12650 Ventura Blvd, Studio City, CA 91604</h2>
+		<i class="fa-solid fa-clock" id="clock" onclick="openHours()"></i>
+		<p style="margin: 180px auto; z-index: 1;" id="clock" onclick="openHours()">See open hours</p>
+		<p style="margin: 220px auto;">Monday 12:00 PM - 9:00 P.M <br> Tuesday 11:30 AM - 9:00 PM <br> Wednesday 11:30 AM - 10:00 PM<br> Thursday 11:30 AM - 10:00 PM <br> Friday 11:30 AM - 11:00 PM <br> Saturday 10:00 AM - 11:00 PM <br> Sunday 10:00 AM - 9:00 PM <br> Brunch Saturday & Sunday 10:00AM - 3:00 PM</p>
+	</div>
+
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.0858458689113!2d-118.41122978479481!3d34.14414578058101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bdf14a840001%3A0xde5827fbc2705357!2sThe%20Six%20Chow%20House!5e0!3m2!1sen!2sus!4v1659842317109!5m2!1sen!2sus" width="100%" height="150" style="border:0;" class="reveal" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	<div class="reservations-container revealOpacity">
+	<div class="reservations" style="background-color: black">
+		<h1>RESERVATIONS</h1>
+		<p style="margin: 10px auto;">Make sure we've got a table ready for you</p>
+		<a href="https://www.yelp.com/reservations/the-six-chow-house-studio-city-studio-city?covers=2&date=2022-11-04&source=yelp_biz&time=1900"><h2 class="ctn2" style="background-color: #8d021f; border-color: #ffcc00; color: white; opacity: 0.8;">Book a table</h2></a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	document.getElementById("clock").onclick = function() { 
+			openHours()  
+		}; 
+		function openHours() {
+			if (document.getElementById("address").style.height == "25vh") {
+				document.getElementById("address").style.height = "45vh";
+			} else {
+				document.getElementById("address").style.height = "25vh";
+			}
+		}
+</script>
+
+
+	<div class="slideshow-container reveal">
+
+  		<!-- Full-width images with number and caption text -->
+  		<div class="mySlides fade">
+    		<img src="./img/sour.jpg" style="width:100%; height: 500px; object-fit: cover;">
+    		<a href="#menus"><div class="text">FOOD & BEVERAGE PROGRAM</div></a>
+    		<a href="#menus"><h2 class="ctn2">Our Menu</h2></a>
+  		</div>
+
+  		<div class="mySlides fade">
+    		<img src="./img/2.jpg" style="width:100%; height: 500px; object-fit: cover;">
+    		<div class="text">CREATING UNFORGETTABLE MEMORIES</div>
+    		<a href="#container"><h2 class="ctn2">Book an Event</h2></a>
+  		</div>
+
+  		<div class="mySlides fade">
+    		<img src="./img/studiointerior.jpg" style="width:100%; height: 500px; object-fit: cover;">
+    		<div class="text">AMAZING INTERIORS</div>
+    		<a href="https://www.yelp.com/reservations/the-six-chow-house-studio-city-studio-city?covers=2&date=2022-11-04&source=yelp_biz&time=1900"><h2 class="ctn2">Book a table</h2></a>
+  		</div>
+
+  		<!-- Next and previous buttons -->
+  		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+  		<span class="dot" onclick="currentSlide(1)"></span>
+  		<span class="dot" onclick="currentSlide(2)"></span>
+  		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+
+<div class="aboutContainer" id="aboutContainer">
+	<div class="about revealOpacity">
+		<h1 class="reveal" onclick="showAbout()" id="aboutbutton">ABOUT US</h1>
+		<p id="aboutText">The Society of Six was an influential community of six artists in Northern California during the 1920’s prohibition era. At their cabin, known as “The Chow House,” these six closely-knit artists enjoyed creating art with their home-made meals, brews and wines. <br><br> We have brought to our neighborhood a cozy atmosphere that is affordable and accessible to everyone. The restaurant’s décor is built using primarily recycled materials. Classic cast iron skillets and rustic wood planks are often used to serve our delicious locally sourced fare. </p>
+	</div>
+</div>
+
+<script type="text/javascript">
+		document.getElementById("aboutbutton").onclick = function() { 
+		showAbout()  
+		}; 
+		function showAbout() { 
+			if (document.getElementById("aboutContainer").style.height == "14vh") {
+			document.getElementById("aboutContainer").style.height = "50vh";
+			document.getElementById("aboutText").style.visibility = "visible";
+		} else {
+			document.getElementById("aboutContainer").style.height = "14vh";
+			document.getElementById("aboutText").style.visibility = "hidden";
+		}
+		}
+</script>
+
+	<div class="food reveal">
+		<img src= "./img/sour.jpg" width = "300" height = "300" class="foodpic">  
+		<h2>OUR MENU</h2>
+		<p class="foodp revealOpacity">See the delicious options we have to offer</p>
+		<a href="#menus"><p class="ctnFood">VIEW OUR MENU</p></a>
+	</div>
+	<div class="delivery reveal" id="delivery" style="background-color: black;">
+			<h1>DELIVERY</h1>
+			<p>You can take the six experience home 
+				Order now from your favorite delivery apps </p>
+				<div class="deliveries">
+					<a href="https://www.grubhub.com/restaurant/the-six-chow-house-12650-ventura-blvd-los-angeles/553345"><h2 class="ctn3" id="grub">GRUBHUB</h2></a>
+					<a href="https://www.doordash.com/store/the-six-los-angeles-5320/"><h2 class="ctn3" id="door">DOORDASH</h2></a>
+					<a href="https://www.ubereats.com/store/the-six-restaurant-studio-city/51sHNxxuS1m3ByoMga3-2g"><h2 class="ctn3" id="uber">UBEREATS</h2></a>
+					<a href="https://slicelife.com/restaurants/ca/studio-city/91604/the-six-chow-house/menu?utm_source=PaidGoogle&utm_medium=cpc&gclid=Cj0KCQjw9ZGYBhCEARIsAEUXITV3YN7pZjm5ERTHcWbLypQw-DxkW5zyskfHpZMxTmonidEfX9oKjbUaAleTEALw_wcB&utm_campaignid=16095963349&utm_adgroupid=&utm_adid=&utm_term=&utm_matchtype=&utm_campaign=Slice_g_ACQ_PerformanceMax&utm_adgroup=&gclid=Cj0KCQjw9ZGYBhCEARIsAEUXITV3YN7pZjm5ERTHcWbLypQw-DxkW5zyskfHpZMxTmonidEfX9oKjbUaAleTEALw_wcB"><h2 class="ctn3" id="postmates">SLICE</h2></a>
+				<!-- Slice Integration // The Six Chow House, Studio City, 50480 -->
+<script>
+  (function (w, d, s, o, f, js, fjs) {
+    w[o] = w[o] || function (opt) { w[o].q = w[o].q || opt };
+    (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+    js.src = f;
+    js.async = 1;
+    if (fjs) { fjs.parentNode.insertBefore(js, fjs) } else { fjs = d.getElementsByTagName('head')[0]; fjs.appendChild(js) }
+  })(window, document, 'script', 'SliceWidgets', 'https://restaurant-widgets-integrations.slicelife.com/widget.js');
+  SliceWidgets({ shopUuid: 'e726fa1b-cd32-46a6-ae91-65e605d03d5b' });
+</script>
+<!-- Slice Integration // The Six Chow House, Studio City, 50480 -->
+			</div>
+	</div>
+
+	<div class="events reveal">
+		<img src= "./img/studiocity.jpg" width = "300" height = "300" class="eventpic"> 
+		<h2>EVENTS</h2>
+		<p class="eventsp reveal">All of our locations feature beautiful, roomy private event spaces for graduation parties, corporate functions, holiday gatherings, baby showers, rehearsal dinners, birthday brunches… you name it.  </p>
+		<a href="#container"><p class="ctnEvents">Book an Event</p></a>
+	</div>
+
+
+<div id="container" class="">
+  <h1>&bull; YOUR EVENT AT THE SIX &bull;</h1>
+  <div>
+  </div>
+  <!-- <div class="icon_wrapper">
+    <svg class="icon" viewBox="0 0 145.192 145.192">
+      <path d="M126.82,32.694c-2.804,0-5.08,2.273-5.08,5.075v2.721c-1.462,0-2.646,1.185-2.646,2.647v1.995    c0,1.585,1.286,2.873,2.874,2.873h20.577c1.462,0,2.646-1.185,2.646-2.647v-3.041c0-1.009-0.816-1.825-1.823-1.825v-2.722    c0-2.802-2.276-5.075-5.079-5.075h-1.985v-3.829c0-3.816-3.095-6.912-6.913-6.912h-0.589h-20.45c0-2.67-2.164-4.835-4.833-4.835    H56.843c-2.67,0-4.835,2.165-4.835,4.835H34.356v-3.384h-9.563v3.384v1.178h-7.061v1.416c-2.67,0.27-10.17,1.424-13.882,5.972    c-1.773,2.17-2.44,4.791-1.983,7.793c0.463,3.043,1.271,6.346,2.128,9.841c2.354,9.616,5.024,20.515,0.549,28.077    C2.647,79.44-3.125,90.589,2.201,99.547c4.123,6.935,13.701,10.44,28.5,10.44c1.186,0,2.405-0.023,3.658-0.068v9.028h-0.296    c-2.516,0-4.558,2.039-4.558,4.558v4.566h100.04v-4.564c0-2.519-2.039-4.558-4.558-4.558h-0.297V84.631h0.297    c2.519,0,4.558-2.037,4.558-4.556v-0.009c0-2.516-2.039-4.556-4.556-4.556l-36.786-0.009V61.973c0-2.193-1.777-3.971-3.972-3.971    v-4.711h0.456c1.629,0,2.952-1.32,2.952-2.949h14.227V34.459h1.658c2.672,0,4.834-2.165,4.834-4.834h20.45v3.069H126.82z     M34.06,75.511c-2.518,0-4.558,2.04-4.558,4.556v0.009c0,2.519,2.042,4.556,4.558,4.556h0.296v24.12l-0.042-1.168    c-15.994,0.574-26.122-2.523-30.106-9.229C-0.464,90.5,4.822,80.347,6.55,77.423c4.964-8.382,2.173-19.774-0.29-29.825    c-0.843-3.442-1.639-6.696-2.088-9.638c-0.354-2.35,0.129-4.3,1.484-5.958c3.029-3.714,9.509-4.805,12.076-5.1v1.233h7.061v1.49    v2.684c-2.403,1.114-4.153,2.997-4.676,5.237H18.15c-0.584,0-1.056,0.474-1.056,1.056v0.83c0,0.584,0.475,1.056,1.056,1.056h1.984    c0.561,2.18,2.304,3.999,4.658,5.092v0.029c0,0-2.282,20.823,16.479,22.099v1.102c0,1.177,0.955,2.133,2.133,2.133h3.297    c1.178,0,2.133-0.956,2.133-2.133V50.135c0-1.177-0.955-2.132-2.133-2.132h-3.297c-1.178,0-2.133,0.955-2.133,2.132    c-1.575-0.235-5.532-1.17-6.635-4.547c2.36-1.092,4.109-2.913,4.669-5.097h1.308c0.722,0,1.309-0.584,1.309-1.308v-0.578    c0-0.584-0.475-1.056-1.056-1.056h-1.539c-0.542-2.332-2.416-4.271-4.968-5.363v-2.559h17.651c0,2.67,2.166,4.835,4.836,4.835 h2.392v15.88h13.639c0,1.629,1.321,2.949,2.951,2.949h0.899v4.711c-2.194,0-3.972,1.778-3.972,3.971v13.529L34.06,75.511z     M95.188,101.78c0,8.655-7.012,15.665-15.664,15.665c-8.653,0-15.667-7.01-15.667-15.665c0-8.647,7.014-15.664,15.667-15.664    C88.177,86.116,95.188,93.132,95.188,101.78z M97.189,45.669h-9.556c0-0.896-0.726-1.62-1.619-1.62H74.494    c-0.896,0-1.621,0.727-1.621,1.62h-8.967v-11.21h33.283V45.669z"></path>
+      <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
+    </svg>
+  </div> -->
+  <form action="https://formsubmit.co/raulsilos5@gmail.com" method="POST" id="contact_form">
+    <div class="name">
+      <label for="name"></label>
+      <input type="text" placeholder="My name is" name="name" id="name_input" required>
+    </div>
+    <div class="email">
+      <label for="email"></label>
+      <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+      <input type="hidden" name="_next" value="http://the6socialhouse.com/thankyou">
+    </div>
+    <div class="telephone">
+      <label for="name"></label>
+      <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+    </div>
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="TYPE OF EVENT" name="subject" id="subject_input" required>
+        <option disabled hidden selected>TYPE OF EVENT</option>
+        <option>Birthday</option>
+        <option>Baby Shower</option>
+        <option>Corporate Party</option>
+      </select>
+    </div>
+    <div class="spot">
+      <label for="spot"></label>
+      <select placeholder="LOCATION" name="subject" id="subject_input" required>
+        <option disabled hidden selected>LOCATION</option>
+        <option>The Six © Studio City (12650 Ventura Blvd, Studio City, CA)</option>
+        <option>The Six © Calabasas (26500 W Agoura Rd, Calabasas, CA)</option>
+        <option>Lost & Found (11700 National Blvd Los Angeles)</option>
+        <option>The Six © West LA (10668 West Pico Blvd, Los Angeles)</option>
+      </select>
+    </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" placeholder="Number of Guests, Date and Time, your Preferences" id="message_input" cols="30" rows="5" required></textarea>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Send Message" id="form_button" />
+    </div>
+  </form><!-- // End form -->
+</div>
+
+
+<!-- menus --> 
+	<div class="menus reveal" id="menus">
+		<h3>THE SIX MENU</h3>
+		<h2 id="dinnerBtn" class="menubutton">DINNER</h2>
+		<h2 class="menubutton" id="brunchBtn">BRUNCH</h2>
+		<!-- <h2 class="menubutton" id="drinksBtn">LIBATIONS</h2> -->
+
+		<div class="menuContainer">
+			<!-- <div class="dinner" id="dinnerTxt">
+				<img src="./img/dinner.png">
+			</div> -->
+
+			<!-- <div class="brunch" id="brunchTxt">
+				<img src="./img/brunch.png">
+			</div>
+			<div class="drinks" id="drinksTxt">
+				<img src="./img/libations.png">
+			</div> 
+		</div>-->
+	</div> 
+
+	<div id="dinnerTxt"> 
+		<div style="position: relative; width: 100%; height: 0; padding-top: 500.0000%;
+ padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFIlARee78&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFIlARee78&#x2F;view?utm_content=DAFIlARee78&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+</div>
+
+		<div id="brunchTxt"> 
+		<div style="position: relative; width: 100%; height: 0; padding-top: 500.0000%;
+ padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFImEEKSMw&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFImEEKSMw&#x2F;view?utm_content=DAFImEEKSMw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+		</div>
+
+		<div id="drinksTxt"> 
+		<div style="position: relative; width: 100%; height: 0; padding-top: 500.0000%;
+ padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFH8gI7tIQ&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFH8gI7tIQ&#x2F;watch?utm_content=DAFH8gI7tIQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+	</div>
+
+<script type="text/javascript">
+	document.getElementById("dinnerBtn").onclick = function() { 
+		dinner()  
+		}; 
+		function dinner() {
+			document.getElementById("dinnerTxt").style.display = "block";
+			document.getElementById("brunchTxt").style.display = "none";
+			document.getElementById("drinksTxt").style.display = "none";
+		}
+		document.getElementById("brunchBtn").onclick = function() { 
+		brunch()  
+		}; 
+		function brunch() {
+			document.getElementById("dinnerTxt").style.display = "none";
+			document.getElementById("brunchTxt").style.display = "block";
+			document.getElementById("drinksTxt").style.display = "none";
+		}
+	document.getElementById("drinksBtn").onclick = function() { 
+		drinks()  
+		}; 
+		function drinks() {
+			document.getElementById("dinnerTxt").style.display = "none";
+			document.getElementById("brunchTxt").style.display = "none";
+			document.getElementById("drinksTxt").style.display = "block";
+		}
+
+</script>
+
+<!-- footer -->
+<div class="footer-dark">
+        <footer>
+            <div class="container2">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <a href="#address" style="color: whitesmoke;"><u><h3 style="font-size: 16px;">12650 Ventura Blvd, Studio City, CA 91604</h3></u></a>
+                        <ul style="color: lightgrey;">
+                            <li><p>Monday 12:00 PM - 9:00 P.M <br> Tuesday 11:30 AM - 9:00 PM <br> Wednesday 11:30 AM - 10:00 PM<br> Thursday 11:30 AM - 10:00 PM <br> Friday 11:30 AM - 11:00 PM <br> Saturday 10:00 AM - 11:00 PM <br> Sunday 10:00 AM - 9:00 PM <br> Brunch Saturday & Sunday 10:00AM - 3:00 PM</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <a href="tel:8187612319" style="color: whitesmoke;"><u><h3 style="font-size: 16px;">Call us at (818) 761-2319</h3></u></a>
+                        <ul>
+                            <li><a href="https://www.instagram.com/thesixstudiocity/">Instagram</a></li>
+                            <li><a href="https://www.yelp.com/biz/the-six-chow-house-studio-city-studio-city">Yelp</a></li>
+                            <li><a href="#delivery">Delivery</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <p class="copyright">Designed by Anton Chizhov in 2022</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+	<!-- ANIMATION ON SCROLL --> 
+	<script type="text/javascript">
+		function reveal() {
+  			var reveals = document.querySelectorAll(".reveal");
+  			var revealsOpacity = document.querySelectorAll(".revealOpacity");
+
+  			for (var i = 0; i < reveals.length; i++) {
+    			var windowHeight = window.innerHeight;
+    			var elementTop = reveals[i].getBoundingClientRect().top;
+    			var elementVisible = 150;
+    			if (elementTop < windowHeight - elementVisible) {
+      				reveals[i].classList.add("active");
+    			} else {
+      				reveals[i].classList.remove("active");
+    			}
+ 	 		}
+ 	 		for (var i = 0; i < revealsOpacity.length; i++) {
+    			var windowHeight = window.innerHeight;
+    			var elementTop = revealsOpacity[i].getBoundingClientRect().top;
+    			var elementVisible = 100;
+    			if (elementTop < windowHeight - elementVisible) {
+      				revealsOpacity[i].classList.add("active");
+    			} else {
+      				revealsOpacity[i].classList.remove("active");
+    			}
+ 	 		}
+		}
+	window.addEventListener("scroll", reveal);
+	reveal();
+	</script>
+
+
+	<!-- GALLERY -->
+	<script type="text/javascript">
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		yourFunction();
+
+		// Next/previous controls
+		function plusSlides(n) {
+  			showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+  			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+  			let i;
+  			let slides = document.getElementsByClassName("mySlides");
+  			let dots = document.getElementsByClassName("dot");
+  			if (n > slides.length) {slideIndex = 1}
+  		if (n < 1) {slideIndex = slides.length}
+  		for (i = 0; i < slides.length; i++) {
+    		slides[i].style.display = "none";
+  		}
+  		for (i = 0; i < dots.length; i++) {
+    		dots[i].className = dots[i].className.replace(" active", "");
+  		}
+  		slides[slideIndex-1].style.display = "block";
+ 		dots[slideIndex-1].className += " active";
+		}
+
+		function yourFunction(){
+    		plusSlides(1);
+    		setTimeout(yourFunction, 3500);
+		}
+		
+	</script>
+
+
+	<!-- MENU BUTTON -->
+	<script>
+		const menuBtn = document.querySelector('.fa-bars')
+		const navlinks = document.querySelector('.nav-links')
+		const logo = document.querySelector('.logo')
+
+		menuBtn.addEventListener("click", Respond)
+
+		function Respond(e) {
+			window.scrollTo(0, 0);
+			navlinks.classList.toggle('mobile-menu');
+			logo.classList.toggle('logo-menuOpen')
+		}
+	</script>
+
+	<!-- SHOW NAVBAR BG & CHANGE LOGO SIZE & ICONS WHEN SCROLLING -->
+	<script type="text/javascript">
+		var element = document.querySelector(".navbar");
+		var element2 = document.querySelector(".nav-links");
+		var element3 = document.querySelector(".logo");
+		var element4 = document.querySelector(".fa");
+		var element5 = document.querySelector(".fa-brands");
+		var element6 = document.querySelector(".fa-yelp");
+		var scrollClipHeight = 900;
+
+		const doSomething = function doSomething() {
+
+		if ((window.innerHeight + window.scrollY) - (scrollClipHeight || 0) >= 
+           element.getBoundingClientRect().top && window.screen.width <= 768) {
+			element2.style.display = "none";
+		} else {
+		element2.style.display = "inherit";
+	}
+
+
+
+    	if (
+           (window.innerHeight + window.scrollY) - (scrollClipHeight || 0) >= 
+           element.getBoundingClientRect().top
+    	) {
+        	element.style.background = "rgba(1,1,1,0.5)";
+        	// element2.style.display = "none";
+        	element3.style.width = "50%";
+        	element4.style.fontSize = "30px"
+        	element5.style.fontSize = "30px"
+        	element5.style.color = "#fb3958"
+        	element6.style.fontSize = "30px"
+        	element6.style.color = "#fb3958"
+
+		} else {
+			element.style.background = "rgba(1,1,1,0)";
+			// element2.style.display = "inherit";
+			element3.style.width = "60%";
+			element4.style.fontSize = "40px"
+			element5.style.fontSize = "40px"
+			element5.style.color = "white"
+			element6.style.fontSize = "40px"
+			element6.style.color = "white"
+
+		}
+	};
+		doSomething();
+		addEventListener("scroll", doSomething, false)
+	</script>
+</body>
+</html>

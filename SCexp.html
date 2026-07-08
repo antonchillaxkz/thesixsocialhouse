@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Example</title>
+   <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .navbar {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 10px 0;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 2;
+            object-fit: cover; /* Ensures the image covers the container */
+            object-position: center; /* Centers the image */
+            display: block; /* Ensure images are shown */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Logo</div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#page1">Page 1</a></li>
+            <li><a href="#page2">Page 2</a></li>
+            <li><a href="#page3">Page 3</a></li>
+            <li><a href="#page4">Page 4</a></li>
+            <li><a href="#page5">Page 5</a></li>
+        </ul>
+    </nav>
+    <div class="gallery">
+        <!-- Placeholder for images -->
+        <img src="./img/Sbar/1.jpeg" alt="Event Image 1">
+        <img src="./img/Sbar/2.jpeg" alt="Event Image 2">
+        <img src="./img/Sbar/3.jpeg" alt="Event Image 3">
+        <img src="./img/Sbar/1.jpeg" alt="Event Image 4">
+        <img src="./img/Sbar/2.jpeg" alt="Event Image 5">
+        <img src="./img/Sbar/3.jpeg" alt="Event Image 6">
+    </div>
+
+</body>
+</html>
+
